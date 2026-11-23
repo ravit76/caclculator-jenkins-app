@@ -61,7 +61,6 @@ public class CalculatorTest {
 	@Test
 	@DisplayName("Subtraction test")
 	public void testSubtraction() {
-		assertEquals(1,c1.sub(2, 3));
 		assertNotEquals(1, c1.sub(2, 3));
 	}
 	
@@ -69,7 +68,6 @@ public class CalculatorTest {
 	public void testMultplication() {
 		assertEquals(6, c1.prod(2, 3));
 		assertNotEquals(5, c1.prod(2, 3));
-		assertEquals(6, c1.prod(5, 5));;
 	}
 	
 	@Test
@@ -79,7 +77,7 @@ public class CalculatorTest {
 	
 	@Test
 	public void testDivException() {
-		assertThrows(NullPointerException.class, ()-> c1.division(10, 0));
+		assertThrows(ArithmeticException.class, ()-> c1.division(10, 0));
 	}
 	
 	@Test
