@@ -16,17 +16,17 @@ pipeline{
 				bat 'mvn -version'
 			}
 		}
-		stage('perform Checkout') {
+		stage('Clean and Compile') {
 			steps{
 				bat 'mvn clean compile'
 			}
 		}
-		stage('run tests') {
+		stage('Test') {
 			steps{
 				bat 'mvn test'
 			}
 		}
-		stage('run package') {
+		stage('package') {
 			steps{
 				bat	'mvn package'
 			}
