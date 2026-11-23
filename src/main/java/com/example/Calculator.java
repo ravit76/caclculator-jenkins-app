@@ -1,7 +1,7 @@
 package com.example;
 
 public class Calculator {
-
+// added comment
 	public int add(int x, int y) {
 		return x+y;
 	}
