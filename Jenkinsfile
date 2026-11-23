@@ -11,12 +11,12 @@ pipeline{
 				bat 'java --version'
 			}
 		}
-		stage('Check Java version'){
+		stage('Check maven version'){
 			steps {
 				bat 'mvn -version'
 			}
 		}
-		stage('Checkout') {
+		stage('perform Checkout') {
 			steps{
 				bat 'mvn clean compile'
 			}
@@ -26,8 +26,10 @@ pipeline{
 				bat 'mvn test'
 			}
 		}
-		stage('package') {
-			bat	'mvn package'
+		stage('run package') {
+			steps{
+				bat	'mvn package'
+			}
 		}
 	}
 }
